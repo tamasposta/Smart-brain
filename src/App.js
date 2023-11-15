@@ -98,14 +98,7 @@ class App extends Component {
       body: raw
     };
 
-    fetch(
-      "https://api.clarifai.com/v2/models/" +
-        MODEL_ID +
-        "/versions/" +
-        MODEL_VERSION_ID +
-        "/outputs",
-      requestOptions
-    )
+    fetch("https://api.clarifai.com/v2/models/" +  MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
       .then((response) => response.json())
       .then((response) => {
         if (response) {
